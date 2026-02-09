@@ -1,0 +1,136 @@
+/* ====== Reset / Base ====== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* ====== Layout ====== */
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* ====== Top Bar (Gradebook vibe) ====== */
+.topbar {
+  background: #0f172a;          /* deep navy */
+  color: #fff;
+  border-bottom: 3px solid #1d4ed8; /* blue accent */
+}
+
+.topbar .container {
+  padding: 22px 0;
+}
+
+.topbar h1 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* ====== Navigation ====== */
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #e5e7eb;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.08s ease, background 0.2s ease;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+/* ====== Card (Portal panel) ====== */
+.card {
+  background: #ffffff;
+  margin: 28px 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  background: #f1f5f9; /* light slate */
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #0f172a;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #dcfce7; /* light green */
+  color: #166534;      /* dark green */
+  border: 1px solid #86efac;
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card-body p {
+  margin: 0 0 10px;
+  color: #334155;
+}
+
+/* ====== Image styling ====== */
+.laptop-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  margin-top: 12px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 20px rgba(2, 6, 23, 0.10);
+}
+
+/* ====== Footer ====== */
+.footer {
+  margin-top: 30px;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.footer .container {
+  padding: 16px 0;
+  color: #64748b;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ====== Mobile tweaks ====== */
+@media (max-width: 480px) {
+  .topbar h1 { font-size: 18px; }
+  .nav a { width: 100%; justify-content: center; text-align: center; }
+}
